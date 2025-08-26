@@ -86,7 +86,7 @@ class DBCollector(object):
             cdef uintptr_t _entry =  <uintptr_t> data
             cdef db_entry *entry = <db_entry*> _entry
 
-            i = entry.quantity + 1
+            cdef int i = entry.quantity + 1
 
 
             data = [None] * 15
